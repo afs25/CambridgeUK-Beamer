@@ -73,31 +73,32 @@
   %
   % Insert titlegraphic
   \vskip2\cam@inner@pitch
-  {\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic\par}
+  {\hskip1.4em\usebeamercolor[fg]{titlegraphic}\inserttitlegraphic\par}
   \vskip2\cam@inner@pitch
   \vskip0pt plus 1filll
   %
   % The title itself
-  \begin{beamercolorbox}[wd=\oversized@paperwidth,sep=\cam@inner@pitch,leftskip=\cam@inner@pitch,rightskip=\cam@inner@pitch,#1]{title}
+  \begin{beamercolorbox}[wd=\oversized@paperwidth,ht=15.0\cam@inner@pitch,sep=\cam@inner@pitch,leftskip=\cam@inner@pitch,rightskip=\cam@inner@pitch,#1]{title}
     \usebeamerfont{title}\inserttitle\par%
     \ifx\insertsubtitle\@empty%
     \else%
       \vskip\cam@inner@pitch%
       {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
-    \fi%     
+    \fi%    
+    \vskip\cam@inner@pitch%
+    {\usebeamerfont{institute}\insertauthor\par}%
   \end{beamercolorbox}\nointerlineskip%
-  \begin{beamercolorbox}[wd=\oversized@paperwidth,sep=0.5\cam@inner@pitch,leftskip=1.5\cam@inner@pitch,rightskip=1.5\cam@inner@pitch,#1]{title page author}
-    {\usebeamerfont{author}\insertauthor\par}
+  \begin{beamercolorbox}[wd=\oversized@paperwidth,sep=0.5\cam@inner@pitch,ht=3.0\cam@inner@pitch,leftskip=1.5\cam@inner@pitch,rightskip=1.5\cam@inner@pitch,#1]{title page author}
     \ifx\insertinstitute\@empty
     \else
       \vskip\cam@inner@pitch
       {\usebeamerfont{institute}\insertinstitute\par}
     \fi
   \end{beamercolorbox}\nointerlineskip%
-  \begin{beamercolorbox}[wd=\oversized@paperwidth,sep=0.5\cam@inner@pitch,leftskip=1.5\cam@inner@pitch,rightskip=1.5\cam@inner@pitch,#1]{title page date}
-    \hfill\usebeamerfont{date}\insertdate
+  \begin{beamercolorbox}[wd=\oversized@paperwidth,sep=0.5\cam@inner@pitch,ht=1.5\cam@inner@pitch,leftskip=1.5\cam@inner@pitch,rightskip=1.5\cam@inner@pitch,#1]{title page date}
+    \usebeamerfont{date}\insertdate
   \end{beamercolorbox}
-  \vskip-\cam@inner@pitch % HACK: Not sure why we need this?
+  %\vskip-\cam@inner@pitch % HACK: Not sure why we need this?
 }
 
 % of page
