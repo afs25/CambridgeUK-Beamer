@@ -1,4 +1,6 @@
 # CambridgeUK-Beamer
 A beamer theme conforming to the University of Cambridge's official PowerPoint presentation style.
 
-You may see the example output in `example.pdf`.
+Modified by André Sartori to add support for licence and/or departmental/research group logos:
+
+You may see an example of output in `example.pdf`.

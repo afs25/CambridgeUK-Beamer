@@ -16,7 +16,16 @@
 \setbeamercolor{progress}{fg=structure.fg!50}
 
 % The University logo
-\pgfdeclareimage[height=1.5\cam@outer@pitch]{beamerlogocambridge}{uc-rev-cmyk}
+\pgfdeclareimage[height=1.5\cam@outer@pitch]{beamerlogocambridge}{theme-staticfiles/uc-rev-cmyk}
+
+% The OSC logo
+\pgfdeclareimage[height=1.5\cam@outer@pitch]{osclogo}{theme-staticfiles/osc-logos/osc-white}
+
+% The Research Data logo
+\pgfdeclareimage[height=1.5\cam@outer@pitch]{datalogo}{theme-staticfiles/osc-logos/data-white}
+
+% CC-BY licence
+\pgfdeclareimage[height=1\cam@outer@pitch]{licence}{theme-staticfiles/cc-licences/cc-by}
 
 \mode<presentation>
 
@@ -117,7 +126,7 @@
     % There was a frame title, typeset the counterpart to the frame title (this is a hack).
     \begin{beamercolorbox}[sep=0.5\cam@outer@pitch,leftskip=1.5\cam@outer@pitch,rightskip=0.5\cam@outer@pitch]{palette secondry}%
       \usebeamerfont{logo in head/foot}\insertlogo
-      \hfill
+      %\hfill
       %\hbox{\usebeamertemplate{footprogress}}
     \end{beamercolorbox}%
   \fi

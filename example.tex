@@ -1,6 +1,7 @@
 % Copyright 2007 by Till Tantau
 % Copyright 2014 by Rich Wareham, Filippo Spiga
 % Copyright 2016 by Petar Veličković
+% Copyright 2018 by André Sartori
 %
 % This file may be distributed and/or modified:
 % 1. under the LaTeX Project Public License and/or
@@ -8,7 +9,7 @@
 %
 % See the file LICENSE for more details.
 
-\documentclass{beamer}
+\documentclass[c]{beamer}
 
 \usetheme{cambridge} 
 
@@ -16,9 +17,10 @@
 
 %%% Standard packages:
 \usepackage[english]{babel}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{multicol}
+\usepackage{hyperref}
 \usepackage{subfigure}
 \usepackage{listings}
 \usepackage[UKenglish]{isodate}
@@ -29,7 +31,38 @@
 \usetikzlibrary{arrows}
 \tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
 
-\cleanlookdateon
+% Declare logos
+
+\newlength{\logoh} \setlength{\logoh}{0.0333333\paperheight} 
+% University logo
+\pgfdeclareimage[height=1.5\logoh]{beamerlogocambridge}{theme-staticfiles/uc-rev-cmyk}
+%% OSC logo
+%\pgfdeclareimage[height=1.5\logoh]{osclogo}{theme-staticfiles/osc-logos/osc-white}
+%% Research Data logo
+%\pgfdeclareimage[height=1.5\logoh]{datalogo}{theme-staticfiles/osc-logos/data-white}
+%% Open Access team logo
+%\pgfdeclareimage[height=1.5\logoh]{oalogo}{theme-staticfiles/osc-logos/oa-white}
+%% Thesis logo
+%\pgfdeclareimage[height=1.5\logoh]{thesislogo}{theme-staticfiles/osc-logos/theses-white}
+% CC-BY licence
+\pgfdeclareimage[height=1\logoh]{licence}{theme-staticfiles/cc-licences/cc-by}
+
+
+% Choose what logos you want to appear
+
+\setbeamertemplate{logo}{%
+      \pgfuseimage{beamerlogocambridge}
+      \hfill
+%      \pgfuseimage{osclogo}
+%      \hfill
+%      \pgfuseimage{datalogo}
+%      \hfill
+%      \pgfuseimage{oalogo}
+%      \hfill
+%      \pgfuseimage{thesislogo}
+%      \hfill
+      \pgfuseimage{licence}
+   }
 
 % Author, Title, etc.
 
@@ -87,5 +120,4 @@
 
 
 \end{document}
-
 
