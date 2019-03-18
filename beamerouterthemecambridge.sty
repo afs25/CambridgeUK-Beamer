@@ -89,7 +89,16 @@
   \vskip-1pt % HACK: Removes a bright line at the top of the page.
   \begin{beamercolorbox}[wd=\paperwidth,ht=3.0\cam@outer@pitch,dp=1.8\cam@outer@pitch,leftskip=2\cam@outer@pitch,sep=0pt]{palette primary}%
     \begin{beamercolorbox}[ht=0pt,sep=0pt]{}%
-      \usebeamerfont{frametitle}\insertframetitle
+      {%
+        \ifx\insertframesubtitle\@empty%
+	  \usebeamerfont{frametitle}\insertframetitle%
+        \else%
+	  \usebeamerfont{frametitle}\insertframetitle\par%
+	  \vskip-1ex%
+	  {\usebeamerfont{framesubtitle}\insertframesubtitle}%
+	  \vskip-.3cm
+        \fi
+      }%
     \end{beamercolorbox}
   \end{beamercolorbox}%
   \nointerlineskip
